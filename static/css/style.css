@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.border {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    height: 2px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.header .logo {
+    font-family: "Protest Strike", sans-serif;
+    font-size: 32px;
+}
+
+.logo {
+    color: #e0e0e0;
+    font-size: 24px;
+    flex: 1;
+    text-align: center;
+}
+
+.add-button,
+.delete-button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+.add-button {
+    margin-right: -4px;
+}
+
+.add-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.project-card {
+    position: relative;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #e0e0e0;
+    font-weight: bold;
+    text-align: left;
+}
+
+.project-card .status {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #b0b0b0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+.link-button {
+    background-color: #007BFF;
+    color: #e0e0e0;
+    border: none;
+    padding: 4px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.category {
+    background-color: rgba(200, 200, 200, 0.4);
+    color: #e0e0e0;
+    padding: 3px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 4px 5px 0 0;
+}
+
+.category-section {
+    margin-bottom: 2px;
+}
+
+.link-section {
+    margin-top: 2px;
+}
+
+.status-icon {
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.status-belum {
+    color: red;
+}
+
+.status-selesai {
+    color: green;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.social-icons {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
+/* Side navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu-hover-fill {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.menu-hover-fill li {
+    position: relative;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.menu-hover-fill li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #3498db; /* Warna di sebelah kiri */
+    transition: 0.3s;
+}
+
+.menu-hover-fill li.menu-galxe::before {
+    background-color: #3498db; /* Galxe */
+}
+
+.menu-hover-fill li.menu-retro::before {
+    background-color: #e67e22; /* Retro */
+}
+
+.menu-hover-fill li.menu-testnet::before {
+    background-color: #2ecc71; /* Testnet */
+}
+
+.menu-hover-fill li.menu-telegram::before {
+    background-color: #9b59b6; /* Telegram */
+}
+
+.menu-hover-fill li a {
+    color: #818181;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+.menu-hover-fill li:hover::before {
+    background-color: #f1c40f; /* Warna saat hover */
+}
+
+.menu-hover-fill li:hover a {
+    color: #f1f1f1; /* Warna teks saat hover */
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1e1e1e;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.menu-button:hover {
+    opacity: 0.8;
+}
+
+/* Atur tampilan body */
+body {
+    background: black;
+    color: #fff;
+    
+}
+
+/* Transisi untuk side nav */
+.sidenav a {
+    padding: 8px;
+    display: block;
+    text-align: left;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Efek blur */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparan gelap */
+    z-index: 999; /* Agar berada di atas konten */
+    display: none; /* Mulai dengan tidak terlihat */
+}

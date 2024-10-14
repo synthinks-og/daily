@@ -1,0 +1,15 @@
+<div id="deleteModal" class="modal">
+    <div class="modal-content delete-modal-content">
+        <span class="close">&times;</span>
+        <h2>Piceun Garapan</h2>
+        <form id="deleteForm" method="POST" action="/delete_airdrop">
+            <select name="airdrop" id="airdropSelect" required>
+  <option value="">Pilih Garapan</option>
+                {% for project in projects %}
+                <option value="{{ project[0] }}">{{ project[1] }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Piceun</button>
+        </form>
+    </div>
+</div>

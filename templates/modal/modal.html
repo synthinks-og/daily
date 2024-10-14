@@ -1,0 +1,19 @@
+<!-- templates/modal/modal.html -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <h2>Garapan Anyar</h2>
+        <form id="airdropForm" method="POST" action="/add_airdrop">
+            <input type="text" name="name" id="name" placeholder="Nama Garapan" required>
+            <input type="url" name="link1" id="link1" placeholder="Link Garapan" required>
+            <input type="url" name="link2" id="link2" placeholder="Link Faucet (Lamun aya)">
+            <textarea name="description" id="description" placeholder="Cacadukan (Lamun aya)"></textarea>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="category[]" value="Retro"> Retro</label>
+                <label><input type="checkbox" name="category[]" value="Social"> Social</label>
+                <label><input type="checkbox" name="category[]" value="Testnet"> Testnet</label>
+                <label><input type="checkbox" name="category[]" value="Telegram"> Telegram</label>
+            </div>
+            <button type="submit">Tendeun</button>
+        </form>
+    </div>
+</div>

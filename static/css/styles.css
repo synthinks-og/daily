@@ -1,0 +1,140 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #e0e0e0;
+    margin-top: 0;
+}
+
+/* Other styles remain the same */
+
+.modal-content input[type="text"],
+.modal-content input[type="url"],
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #000000;
+    color: #e0e0e0;
+}
+
+.modal-content .checkbox-group {
+    margin: 10px 0;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.modal-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-modal-content {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.delete-modal-content h2 {
+    color: #e0e0e0;
+}
+
+.delete-modal-content label {
+    margin-top: 10px;
+    color: white;
+}
+
+.delete-modal-content select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #3498db;
+    background-color: #000000;
+    color: white;
+}
+
+.delete-modal-content button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-modal-content button:hover {
+    background-color: #c0392b;
+}

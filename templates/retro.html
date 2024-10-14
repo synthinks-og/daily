@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop-like Page</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div id="overlay" class="overlay" style="display: none;"></div>
+
+<!-- Side Navigation -->
+<div id="sideNav" class="sidenav">
+<ul class="menu-hover-fill">
+    <li class="menu-retro"><a href="/retro" data-text="retro">Retro</a></li>
+    <li class="menu-social"><a href="/social" data-text="social">Social</a></li>
+    <li class="menu-testnet"><a href="/testnet" data-text="testnet">Testnet</a></li>
+    <li class="menu-telegram"><a href="/" data-text="telegram">Telegram</a></li>
+</ul>
+</div>
+
+<<div class="header">
+    <button id="menuButton" class="menu-button section" onclick="openNav()">
+        <span class="material-icons">menu_open</span> <!-- Icon side nav -->
+    </button>
+    <div class="logo section">Garapan Retro</div>
+    <button id="addButton" class="add-button section">
+        <span class="material-icons">add_box</span>
+    </button>
+    <button id="deleteButton" class="delete-button section">
+        <span class="material-icons">delete</span>
+    </button>
+</div>
+
+    <div class="content" style="background-color: #000;"> 
+    
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+            <div class="flash">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div id="projectList">
+            {% for project in projects %}
+            <div class="project-card">
+                <h3>{{ project[1] }}</h3>
+                <p>{{ project[4] }}</p>
+                <div class="link-section">
+                    <a href="{{ project[2] }}" target="_blank" class="link-start" data-id="{{ project[0] }}">
+                        <button class="link-button">Indit</button>
+                    </a>
+                    {% if project[3] %}
+                    <a href="{{ project[3] }}" target="_blank" class="link-start" data-id="{{ project[0] }}">
+                        <button class="link-button">Faucet</button>
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="category-section">
+                    {% for category in project[5].split(',') %}
+                    <span class="category">{{ category.strip() }}</span>
+                    {% endfor %}
+                </div>
+                <div class="status" id="status-{{ project[0] }}">
+                    <span class="material-icons status-icon status-belum">cancel</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'modal/delete.html' %}
+    {% include 'modal/modal.html' %}
+    {% include 'footer.html' %}
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>

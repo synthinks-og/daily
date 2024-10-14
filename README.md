@@ -1,5 +1,6 @@
 
 # 🌟 Daily Airdrop Manager
+Welcome to the Daily Airdrop Manager Application! This Python-based tool is designed to help you easily manage your airdrop task. With a simple and user-friendly interface, you can manage daily check-ins, track airdrop tasks, and efficiently organize all your airdrop activities.
 
 ## ✨ Features
 

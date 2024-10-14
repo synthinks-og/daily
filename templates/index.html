@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airdrop-like Page</title>
+    <title>Airdrop Manager</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Favicon Link -->
+    <link rel="icon" href="static/favicon.png" type="image/png">
 </head>
 <body>
 
@@ -25,15 +26,16 @@
 </div>
 
 <<div class="header">
+<div class="border"></div>
     <button id="menuButton" class="menu-button section" onclick="openNav()">
-        <span class="material-icons">menu_open</span> <!-- Icon side nav -->
+        <span class="fa-solid fa-bars fa-beat-fade"></span> <!-- Icon side nav -->
     </button>
-    <div class="logo section">Garapan Telegram</div>
+    <div class="logo section">Telegram</div>
     <button id="addButton" class="add-button section">
-        <span class="material-icons">add_box</span>
+        <span class="fa-regular fa-square-plus"></span>
     </button>
     <button id="deleteButton" class="delete-button section">
-        <span class="material-icons">delete</span>
+        <span class="fa-solid fa-trash-can"></span>
     </button>
 </div>
 
@@ -56,7 +58,9 @@
                 <p>{{ project[4] }}</p>
                 <div class="link-section">
                     <a href="{{ project[2] }}" target="_blank" class="link-start" data-id="{{ project[0] }}">
-                        <button class="link-button">Indit</button>
+                        <button class="link-button">
+        <i class="fa-solid fa-square-arrow-up-right"></i> Start
+    </button>
                     </a>
                     {% if project[3] %}
                     <a href="{{ project[3] }}" target="_blank" class="link-start" data-id="{{ project[0] }}">
@@ -70,7 +74,7 @@
                     {% endfor %}
                 </div>
                 <div class="status" id="status-{{ project[0] }}">
-                    <span class="material-icons status-icon status-belum">cancel</span>
+                    <span class="fa-solid fa-hourglass fa-spin status-icon status-belum"></span>
                 </div>
             </div>
             {% endfor %}

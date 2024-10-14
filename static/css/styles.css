@@ -30,6 +30,9 @@
 .modal-content h2 {
     color: #e0e0e0;
     margin-top: 0;
+    margin-bottom: 0;
+    text-align: center; /* Memindahkan judul ke tengah */
+    font-size: 24px; /* Mengatur ukuran font */
 }
 
 /* Other styles remain the same */
@@ -40,7 +43,7 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #3498db;
+    border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
@@ -49,7 +52,7 @@
 }
 
 .modal-content .checkbox-group {
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 .modal-content button[type="submit"] {
@@ -110,6 +113,7 @@ form textarea {
 
 .delete-modal-content h2 {
     color: #e0e0e0;
+    margin-bottom: 10px
 }
 
 .delete-modal-content label {
@@ -118,9 +122,9 @@ form textarea {
 }
 
 .delete-modal-content select {
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
-    border: 1px solid #3498db;
+    border: 1px solid #e0e0e0;
     background-color: #000000;
     color: white;
 }
@@ -132,7 +136,7 @@ form textarea {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 .delete-modal-content button:hover {

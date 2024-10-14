@@ -13,17 +13,19 @@ body {
 }
 
 .border {
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-image: linear-gradient(to right, red, yellow, green, blue, indigo, violet);
     height: 2px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
+    left: 0; 
     z-index: 1001;
 }
 
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -36,7 +38,7 @@ body {
 
 .header .logo {
     font-family: "Protest Strike", sans-serif;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .logo {
@@ -52,9 +54,16 @@ body {
     border: none;
     color: #e0e0e0;
     cursor: pointer;
+    font-size: 20px; /* Atur ukuran ikon di sini */
 }
+
+.add-button .fa-square-plus,
+.delete-button .fa-trash-can {
+    font-size: inherit;
+}
+
 .add-button {
-    margin-right: -4px;
+    margin-right: 4px;
 }
 
 .add-button:hover,
@@ -65,6 +74,7 @@ body {
 .content {
     padding: 20px;
     margin-top: 40px;
+    min-height: calc(100vh - 120px); 
 }
 
 .project-card {
@@ -99,18 +109,31 @@ body {
     line-height: 1.5;
 }
 
+.button-container {
+    font-size: 0;
+}
+
 .link-button {
     background-color: #007BFF;
     color: #e0e0e0;
     border: none;
-    padding: 4px 12px;
+    padding: 6px 8px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 5px 0;
+    margin: 4px 0px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+.link-button span,
+.link-button i {
+    margin-right: 6px;
 }
 
 .category {
@@ -127,21 +150,22 @@ body {
 }
 
 .link-section {
-    margin-top: 2px;
+    display: flex;
+    gap: 10px;
 }
 
 .status-icon {
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 50%;
     padding: 4px;
 }
 
 .status-belum {
-    color: red;
+    color: rgba(255, 235, 59, 0.8); 
 }
 
 .status-selesai {
-    color: green;
+    color: #4a90e2;
 }
 
 .footer {
@@ -151,6 +175,9 @@ body {
     text-align: center;
     padding: 10px 0;
     position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
 }
 
 .social-icons {
@@ -170,7 +197,6 @@ body {
     color: #3498db;
 }
 
-/* Side navigation */
 .sidenav {
     height: 100%;
     width: 0;
@@ -205,11 +231,11 @@ body {
     left: 0;
     width: 4px;
     height: 100%;
-    background-color: #3498db; /* Warna di sebelah kiri */
+    background-color: #3498db; 
     transition: 0.3s;
 }
 
-.menu-hover-fill li.menu-galxe::before {
+.menu-hover-fill li.menu-social::before {
     background-color: #3498db; /* Galxe */
 }
 
@@ -233,11 +259,11 @@ body {
 }
 
 .menu-hover-fill li:hover::before {
-    background-color: #f1c40f; /* Warna saat hover */
+    background-color: #f1c40f; 
 }
 
 .menu-hover-fill li:hover a {
-    color: #f1f1f1; /* Warna teks saat hover */
+    color: #f1f1f1; 
 }
 
 /* Header styles */
@@ -254,21 +280,13 @@ body {
     border: none;
     color: #e0e0e0;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .menu-button:hover {
     opacity: 0.8;
 }
 
-/* Atur tampilan body */
-body {
-    background: black;
-    color: #fff;
-    
-}
-
-/* Transisi untuk side nav */
 .sidenav a {
     padding: 8px;
     display: block;
@@ -281,8 +299,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px); /* Efek blur */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparan gelap */
-    z-index: 999; /* Agar berada di atas konten */
-    display: none; /* Mulai dengan tidak terlihat */
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none; 
 }

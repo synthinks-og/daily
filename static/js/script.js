@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 localStorage.removeItem(`statusChangeTime-${projectId}`); // Reset waktu
             } else {
                 // Jika belum lebih dari 24 jam, tampilkan status selesai
-                statusElement.innerHTML = `<span class="material-icons status-icon status-selesai">check_circle</span>`;
+                statusElement.innerHTML = `<span class="fa-solid fa-circle-check status-icon status-selesai"></span>`;
             }
         }
     }
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
 
             const statusElement = document.getElementById(`status-${projectId}`);
-            statusElement.innerHTML = `<span class="material-icons status-icon status-selesai">check_circle</span>`;
+            statusElement.innerHTML = `<span class="fa-solid fa-circle-check status-icon status-selesai"></span>`;
 
             // Simpan waktu saat status berubah
             const currentTime = new Date();
